@@ -1,13 +1,14 @@
 import React from 'react';
-import useInputValue from './hooks/useInputValue.ts';
-import useTodos from './hooks/useTodos.ts';
-import useAddTodos from './hooks/useAddTodos.ts';
-import type { Todo } from './types.ts';
+import useInputValue from './hooks/useInputValue';
+import useTodos from './hooks/useTodos';
+import useAddTodos from './hooks/useAddTodos';
+import type { Todo } from './types';
+import TaskCounter from './components/TaskCounter';
 import './App.css';
 
 const App: React.FC = () => {
 	const { value, onChange, reset } = useInputValue('');
-	const { todos, toggleComplete, addTodo, setFilter } = useTodos();
+	const { todos, toggleComplete, addTodo, setFilter, clearAllTodos } = useTodos();
 	const addTodoHandler = useAddTodos(addTodo);
 
 	const handleSaveInput = () => {
@@ -57,9 +58,11 @@ const App: React.FC = () => {
 
 
 							<div className="filter-buttons">
-								<button onClick={() => setFilter('all')}>All</button>
-								<button onClick={() => setFilter('completed')}>Completed</button>
-								<button onClick={() => setFilter('incomplete')}>Incomplete</button>
+								<TaskCounter count={todos.filter(todo => !todo.completed).length} />
+								<button onClick={() => setFilter('all')}>Все</button>
+								<button onClick={() => setFilter('completed')}>Выполненные</button>
+								<button onClick={() => setFilter('incomplete')}>Незавершенные</button>
+								<button onClick={clearAllTodos}>Очистить список</button>
 							</div>
 
 						</div>
