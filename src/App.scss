@@ -1,0 +1,234 @@
+.todos {
+	max-width: 1920px;
+	min-width: 320px;
+	margin: 0 auto;
+
+	background-color: rgb(95, 63, 63);
+	min-height: 100vh;
+}
+
+.container {
+	margin-bottom: 30px;
+	padding-top: 20vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.todo-content {
+	gap: 20px;
+	
+	width: 900px;
+	padding: 40px;
+	border-radius: 20px;
+	border:1px solid blanchedalmond;
+}
+.header {
+	position: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.input-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.todo-list {
+	margin-top: 20px;
+	width: 100%;
+	
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.todo-list label {
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    border-bottom: 1px solid #ccc;
+    min-height: 50px;
+}
+
+.todo-list label:last-child {
+    border-bottom: none;
+}
+
+.todo-text {
+    font-size: 30px;
+    color: #333;
+    transition: text-decoration 0.2s;
+    word-break: break-word;
+}
+
+.filter-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.filter-buttons button {
+    padding: 8px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background: #ff9800;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    min-width: 120px;
+}
+
+.input {
+    width: 100%;
+    
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 30px;
+    
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #ff9800;
+}
+
+
+
+.filter-buttons button {
+    padding: 8px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background: #ff9800;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    min-width: 120px;
+}
+
+.filter-buttons button:hover {
+    background: #ffa726;
+    transform: translateY(-2px) scale(1.04);
+}
+
+.task-counter {
+    margin-right: 16px;
+    font-weight: 500;
+    color: #ff9800;
+    font-size: 18px;
+}
+
+.header-text {
+    font-size: 70px;
+    font-weight: 600;
+    color: orange;
+    margin-bottom: 16px;
+}
+
+
+.custom-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-checkbox-label:last-child {
+    border-bottom: none;
+}
+
+.custom-checkbox {
+    display: none;
+}
+
+.custom-circle {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #ff9800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    transition: border-color 0.2s, background 0.2s;
+    font-size: 16px;
+    color: #ff9800;
+    position: relative;
+    flex-shrink: 0;
+    &:hover {
+        border-color: #ffa726;
+    }
+}
+
+.custom-checkbox:checked + .custom-circle {
+    background: #ff9800;
+    border-color: #ff9800;
+    color: #fff;
+}
+
+.checkmark {
+    font-size: 16px;
+    color: #ff9800;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.custom-checkbox:checked + .custom-circle .checkmark {
+    color: #fff;
+}
+
+
+
+.input-with-btn {
+	position: relative;
+	width: 100%;
+
+}
+
+.input-with-btn .input {
+	width: 100%;
+	padding-right: 44px;
+	box-sizing: border-box;
+}
+
+.add-btn {
+	position: absolute;
+	right: 4px;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 32px;
+	width: 32px;
+	border: none;
+	border-radius: 50%;
+	background: #ff9800;
+	color: #fff;
+	font-size: 22px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background 0.2s, transform 0.2s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+}
+
+.add-btn:hover {
+	background: #ffa726;
+	transform: translateY(-50%) scale(1.08);
+}
