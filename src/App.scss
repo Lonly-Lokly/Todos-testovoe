@@ -5,24 +5,37 @@
 
 	background-color: rgb(95, 63, 63);
 	min-height: 100vh;
+    max-height: fit-content;
 }
 
 .container {
-	margin-bottom: 30px;
-	padding-top: 20vh;
+	padding: 10vh 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
 .todo-content {
-	gap: 20px;
-	
 	width: 900px;
 	padding: 40px;
 	border-radius: 20px;
 	border:1px solid blanchedalmond;
 }
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid blanchedalmond;
+    border-radius: 6px;
+    font-size: 30px;
+    transition: border-color 0.2s ease-in-out;
+    &:hover, &:focus {
+        border-color: #ff9800;
+        outline: none;
+    }
+}
+
+
 .header {
 	position: flex;
 	flex-direction: column;
@@ -116,7 +129,7 @@
 }
 
 .filter-buttons button:hover {
-    background: #ffa726;
+    background: #938d1a;
     transform: translateY(-2px) scale(1.04);
 }
 
@@ -168,7 +181,7 @@
     position: relative;
     flex-shrink: 0;
     &:hover {
-        border-color: #ffa726;
+        border-color: #938d1a;
     }
 }
 
@@ -176,6 +189,10 @@
     background: #ff9800;
     border-color: #ff9800;
     color: #fff;
+    &:hover {
+        border-color: #938d1a;
+        background: #938d1a;
+    }
 }
 
 .checkmark {
@@ -229,6 +246,6 @@
 }
 
 .add-btn:hover {
-	background: #ffa726;
-	transform: translateY(-50%) scale(1.08);
+	background: #938d1a;
+	transform: translateY(-50%) scale(1.05);
 }
